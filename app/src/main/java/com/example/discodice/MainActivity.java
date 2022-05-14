@@ -1,23 +1,44 @@
 package com.example.discodice;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationView;
+
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    public DrawerLayout drawerLayout;
+    public ActionBarDrawerToggle toggle;
 
     boolean player = true;
     int p1 = 0;
     int p2 = 0;
+
+    // restart
+    void restart(){
+
+        p1 = p2 = 0;
+
+        TextView tvPlayer1 = findViewById(R.id.tvScore1);
+        tvPlayer1.setText(Integer.toString(0));
+
+        TextView tvPlayer2 = findViewById(R.id.tvScore2);
+        tvPlayer2.setText(Integer.toString(0));
+    }
 
     // for displaying winner in alert dialog box
    public void winning(int player){
@@ -42,6 +63,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // slidable menu --------------------------------------------------------------------------------------
+        drawerLayout = findViewById(R.id.drawerLayout);
+        toggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close);
+
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        NavigationView navigationView = findViewById(R.id.navView);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        // ------------------------------------------------------------------------------------------------
+
+        // main logic for game
         Button btnRoll = findViewById(R.id.btRoll);
         btnRoll.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,5 +128,27 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+       if(toggle.onOptionsItemSelected(item)) return true;
+       return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if(id==R.id.miRestart){
+            restart();
+            Toast.makeText(this, "Restarted", Toast.LENGTH_SHORT).show();
+        }
+        if(id==R.id.miNewgame){
+            restart();
+            Toast.makeText(this, "New Game", Toast.LENGTH_SHORT).show();
+        }if(id==R.id.miAbout){
+            Toast.makeText(this, "About", Toast.LENGTH_SHORT).show();
+        }
+        return true;
     }
 }
