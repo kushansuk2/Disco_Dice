@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/miDiceStriking" android:icon="@drawable/dice_striking" android:title="Game" />
+    <item android:id="@+id/miDice" android:icon="@drawable/dice" android:title="Dice"/>
+    <item android:id="@+id/miProfile" android:icon="@drawable/profile" android:title="Profile"/>
+
+</menu>

@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/kusha/OneDrive/Desktop/Disco Dice/DiscoDice/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/kusha/OneDrive/Desktop/Disco Dice/DiscoDice/app/src/main/res/drawable/ic_dice_solid.xml" value="0.1675" />
+        <entry key="..\:/Users/kusha/OneDrive/Desktop/Disco Dice/DiscoDice/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/kusha/OneDrive/Desktop/Disco Dice/DiscoDice/app/src/main/res/layout/fragment_dice.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/kusha/OneDrive/Desktop/Disco Dice/DiscoDice/app/src/main/res/layout/fragment_game.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/kusha/OneDrive/Desktop/Disco Dice/DiscoDice/app/src/main/res/layout/fragment_profile.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/kusha/OneDrive/Desktop/Disco Dice/DiscoDice/app/src/main/res/layout/nav_header.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/kusha/OneDrive/Desktop/Disco Dice/DiscoDice/app/src/main/res/menu/bottom_nav_menu.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/kusha/OneDrive/Desktop/Disco Dice/DiscoDice/app/src/main/res/menu/nav_drawer_menu.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/kusha/udacity/DiscoDice/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
       </map>
