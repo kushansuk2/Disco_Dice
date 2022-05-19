@@ -7,7 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.content.Context;
 import android.content.DialogInterface;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
