@@ -51,6 +51,11 @@ public class MainActivity extends AppCompatActivity   {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //splashscreen-----------------------------------------------------------------------------------
+
+
+        //-----------------------------------------------------------------------------------------------------
+
          //fragments------------------------------------------------------------------------------------------
         replaceFragment(new GameFragment());
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
