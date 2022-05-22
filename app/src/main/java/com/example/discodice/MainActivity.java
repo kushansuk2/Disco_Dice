@@ -34,17 +34,18 @@ public class MainActivity extends AppCompatActivity   {
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle toggle;
     public BottomNavigationView bottomNavigationView;
+    public GameFragment gm = new GameFragment();
 
-//    void restart(){
-//
-//        p1 = p2 = 0;
-//
-//        TextView tvPlayer1 = findViewById(R.id.tvScore1);
-//        tvPlayer1.setText(Integer.toString(0));
-//
-//        TextView tvPlayer2 = findViewById(R.id.tvScore2);
-//        tvPlayer2.setText(Integer.toString(0));
-//    }
+    void restart(){
+
+        gm.p1 = gm.p2 = 0;
+
+        TextView tvPlayer1 = findViewById(R.id.tvScore1);
+        tvPlayer1.setText(Integer.toString(0));
+
+        TextView tvPlayer2 = findViewById(R.id.tvScore2);
+        tvPlayer2.setText(Integer.toString(0));
+    }
 
 
 
@@ -73,9 +74,6 @@ public class MainActivity extends AppCompatActivity   {
             if(id==R.id.miDice){
                 replaceFragment(new DiceFragment());
             }
-            if(id==R.id.miProfile){
-                replaceFragment(new ProfileFragment());
-            }
 
             return true;
         });
@@ -97,14 +95,12 @@ public class MainActivity extends AppCompatActivity   {
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
             if(id==R.id.miRestart){
-                //restart();
+                restart();
                 Toast.makeText(this, "Restarted", Toast.LENGTH_SHORT).show();
             }
-            if(id==R.id.miNewgame){
-                //restart();
+            if(id==R.id.miNewgame) {
+                restart();
                 Toast.makeText(this, "New Game", Toast.LENGTH_SHORT).show();
-            }if(id==R.id.miAbout){
-                Toast.makeText(this, "About", Toast.LENGTH_SHORT).show();
             }
 
             return true;

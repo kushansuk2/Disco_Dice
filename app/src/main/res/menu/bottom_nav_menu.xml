@@ -3,6 +3,5 @@
 
     <item android:id="@+id/miDiceStriking" android:icon="@drawable/dice_striking" android:title="Game" />
     <item android:id="@+id/miDice" android:icon="@drawable/dice" android:title="Dice"/>
-    <item android:id="@+id/miProfile" android:icon="@drawable/profile" android:title="Profile"/>
 
 </menu>
